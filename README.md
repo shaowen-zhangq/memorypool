@@ -109,9 +109,4 @@ msbuild memory_pool.sln /p:Configuration=Debug /p:Platform=x64
 - 没有异常安全设计，也未处理 `malloc` 失败后的恢复。
 - `shrink_to_os` 释放时会丢弃该类别所有 chunk，可能导致重复分配开销。
 
-如果你愿意，我可以继续帮你把这个项目改成：
 
-- 支持任意大小对象记录头信息；
-- 按大小分类锁；
-- 添加单元测试；
-- 或写一份更详细的“代码阅读指南”。
